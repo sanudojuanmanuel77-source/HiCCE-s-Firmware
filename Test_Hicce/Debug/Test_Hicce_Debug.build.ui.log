@@ -1,0 +1,59 @@
+2026-03-31T18:00:05.168594900255-18:00:05 **** Build of configuration Debug for project Test_Hicce ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/echo.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Xilinx/Test_Hicce_V1/Test_Hicce_V1/export/Test_Hicce_V1/sw/Test_Hicce_V1/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+000-../src/echo.c: In function 'XADC_sending':
+000/Test_Hicce/src/echo.c141-1-1initialization of 'u16 *' {aka 'short unsigned int *'} from incompatible pointer type 'u16 (*)[520]' {aka 'short unsigned int (*)[520]'} [-Wincompatible-pointer-types]1-../src/echo.c:141:24: warning: initialization of 'u16 *' {aka 'short unsigned int *'} from incompatible pointer type 'u16 (*)[520]' {aka 'short unsigned int (*)[520]'} [-Wincompatible-pointer-types]
+000-  141 |         u16 *payload = &DataBuffer;
+000-      |                        ^
+000/Test_Hicce/src/echo.c94-1-1unused variable 'client_length' [-Wunused-variable]1-../src/echo.c:94:19: warning: unused variable 'client_length' [-Wunused-variable]
+000-   94 |         socklen_t client_length;
+000-      |                   ^~~~~~~~~~~~~
+000/Test_Hicce/src/echo.c93-1-1unused variable 'client_address' [-Wunused-variable]1-../src/echo.c:93:25: warning: unused variable 'client_address' [-Wunused-variable]
+000-   93 |         struct sockaddr client_address;
+000-      |                         ^~~~~~~~~~~~~~
+000-../src/echo.c: In function 'echo_application_thread':
+000/Test_Hicce/src/echo.c229-1-1unused variable 'size' [-Wunused-variable]1-../src/echo.c:229:13: warning: unused variable 'size' [-Wunused-variable]
+000-  229 |         int size;
+000-      |             ^~~~
+000-../src/echo.c: At top level:
+000/Test_Hicce/src/echo.c64-1-1'DumpU16' defined but not used [-Wunused-function]1DumpU16../src/echo.c:64:13: warning: 'DumpU16' defined but not used [-Wunused-function]
+000-   64 | static void DumpU16(const u16 *buf, int count)
+000-      |             ^~~~~~~
+000-'Finished building: ../src/echo.c'
+000-' '
+000-'Building file: ../src/iic_phyreset.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Xilinx/Test_Hicce_V1/Test_Hicce_V1/export/Test_Hicce_V1/sw/Test_Hicce_V1/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+000-'Finished building: ../src/iic_phyreset.c'
+000-' '
+000-'Building file: ../src/main.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Xilinx/Test_Hicce_V1/Test_Hicce_V1/export/Test_Hicce_V1/sw/Test_Hicce_V1/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000/Test_Hicce/src/main.c72-1-1'dbg_dump_emio54' defined but not used [-Wunused-function]1dbg_dump_emio54../src/main.c:72:13: warning: 'dbg_dump_emio54' defined but not used [-Wunused-function]
+000-   72 | static void dbg_dump_emio54(void) {
+000-      |             ^~~~~~~~~~~~~~~
+000/Test_Hicce/src/main.c66-1-1'Xadc_RawToVoltageFunc' defined but not used [-Wunused-variable]1Xadc_RawToVoltageFunc../src/main.c:66:16: warning: 'Xadc_RawToVoltageFunc' defined but not used [-Wunused-variable]
+000-   66 | static float (*Xadc_RawToVoltageFunc)(u16 RawData); //Puntero a la funcion para convertir la medicion a volts
+000-      |                ^~~~~~~~~~~~~~~~~~~~~
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building target: Test_Hicce.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Xilinx/Test_Hicce_V1/Test_Hicce_V1/export/Test_Hicce_V1/sw/Test_Hicce_V1/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "Test_Hicce.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+000-'Finished building target: Test_Hicce.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size Test_Hicce.elf  |tee "Test_Hicce.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000- 194485	   2728	6412352	6609565	 64da9d	Test_Hicce.elf
+000-'Finished building: Test_Hicce.elf.size'
+000-' '
+00255-
+18:00:07 Build Finished (took 1s.868ms)
+

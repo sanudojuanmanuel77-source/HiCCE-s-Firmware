@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Test_Hicce" location="C:/Xilinx/Test_Hicce_V1/Test_Hicce" platform="C:/Xilinx/Test_Hicce_V1/Test_Hicce_V1/export/Test_Hicce_V1/Test_Hicce_V1.xpfm" platformUID="xilinx:zedboard::0.0(custom)" systemProject="Test_Hicce_system" sysConfig="Test_Hicce_V1" runtime="cpp" cpu="freertos10_xilinx_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="freertos10_xilinx" mssSignature="5551b6dbe54df20058be4b5bd4283fe5">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.400887136">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.233104796" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_lwip_echo_server" hasBspSettings="true"/>
+</sdkproject:SdkProject>
