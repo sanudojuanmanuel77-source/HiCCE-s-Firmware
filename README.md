@@ -1,5 +1,5 @@
 # HiCCE-s-Firmware
-Here you can find all the files needed to reconstruc the firmware I developed as my thesis for getting my degree.  
+Here you can find all the files needed to reconstruct the firmware I developed as my thesis for getting my degree.  
 
 
 # HiCCE-128 Firmware — 128-Channel Biopotential Acquisition on Zynq-7000
